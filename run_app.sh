@@ -1,3 +1,3 @@
 #!/bin/sh
 
-./cmake-build-debug/PokerSlot
+./cmake-build-debug/bin/PokerSlot
