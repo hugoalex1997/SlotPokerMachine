@@ -1,19 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
-option="$1";
-
-if [ "$option" = "-f" ]; then
-rm -rf cmake-build-debug
+rm -rf build
 rm -rf external
-mkdir cmake-build-debug
-cd cmake-build-debug
-cmake ..
-cd ..
-fi
+mkdir build
 
-cd cmake-build-debug
+cmake -B build
+cd build
 make
 cd ..
 
 #Run Game
-./run_app.sh
+./build/bin/PokerSlot
